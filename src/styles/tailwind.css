@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography weights */
+.font-weight-bold {
+  @apply font-bold;
+}
+.font-weight-semi-bold {
+  @apply font-semibold;
+}
+.font-weight-medium {
+  @apply font-medium;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center font-semibold uppercase rounded transition;
+}
+.btn-square { @apply w-9 h-9 p-0 text-center; }
+.btn-sm-square { @apply w-7 h-7 p-0 text-center; }
+.btn-lg-square { @apply w-12 h-12 p-0 text-center; }
+
+.btn-primary { @apply bg-primary text-dark hover:bg-dark hover:text-primary; }
+.btn-light { @apply bg-light text-dark hover:bg-dark hover:text-light; }
+
+/* Navbar */
+.nav-link {
+  @apply font-heading uppercase text-dark py-[45px] px-4;
+}
+.nav-link:hover,
+.nav-link.active {
+  @apply text-primary;
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    @apply py-2;
+  }
+}
+
+/* Service card */
+.service-item {
+  @apply h-[320px] bg-light transition duration-500 p-6 rounded;
+}
+.service-item:hover {
+  @apply bg-dark;
+}
+.service-item h4 {
+  @apply transition duration-500;
+}
+.service-item:hover h4 {
+  @apply text-light;
+}
+
+/* Portfolio hover effect */
+.portfolio-item .portfolio-btn {
+  @apply absolute top-1/2 left-1/2 opacity-0 transition duration-500 bg-dark/50 rounded;
+  width: 0;
+  height: 0;
+}
+.portfolio-item:hover .portfolio-btn {
+  @apply opacity-100 w-full h-full top-0 left-0 border-[30px] border-dark/90;
+}
+.portfolio-item i {
+  @apply opacity-0 transition duration-300 delay-300;
+}
+.portfolio-item:hover i {
+  @apply opacity-100;
+}
+
+/* Team overlay */
+.team-item .team-overlay {
+  @apply absolute flex items-center justify-center top-[30px] right-[30px] bottom-[30px] left-[30px] bg-dark rounded transition duration-500 opacity-0;
+}
+.team-item:hover .team-overlay {
+  @apply opacity-100;
+}
