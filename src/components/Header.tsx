@@ -24,7 +24,7 @@ export default function Header() {
           className={({ isActive }) =>
             [
               "px-2 py-2.5 text-base text-white transition-colors rounded-md",
-              "hover:text-white focus-visible:outline-none",
+              "hover:text-dark focus-visible:outline-none",
               "focus-visible:ring-2 focus-visible:ring-white/70",
               isActive ? "font-semibold" : "",
             ].join(" ")
