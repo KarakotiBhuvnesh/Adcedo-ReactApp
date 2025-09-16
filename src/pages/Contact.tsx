@@ -3,7 +3,6 @@ import PageHeader from '@/components/PageHeader'
 import { site } from '@/data/site'
 
 export default function Contact() {
-  const canonical = 'https://www.adcedo.in/contact'
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const fd = new FormData(e.currentTarget)
@@ -11,8 +10,7 @@ export default function Contact() {
   }
   return (
     <>
-      <Seo title="Contact ADCEDO — Let’s Build Something" canonical={canonical} description="Reach out to ADCEDO to discuss campaigns, collaborations, or partnerships." />
-      <PageHeader title="Contact" canonical={canonical} breadcrumb={[{ name: 'Home', url: 'https://www.adcedo.in/' }, { name: 'Contact', url: canonical }]} />
+      <Seo title="Contact ADCEDO — Let’s Build Something"  description="Reach out to ADCEDO to discuss campaigns, collaborations, or partnerships." />
       <section className="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
         <form onSubmit={onSubmit} className="space-y-4" aria-label="Send Message">
           <div>

@@ -4,11 +4,12 @@ import Section from '@/components/Section'
 import React from "react"
 
 export default function About() {
-  const canonical = 'https://www.adcedo.in/about'
   return (
     <>
-      <Seo title="About ADCEDO — Our Story, Approach & Values" canonical={canonical} description="We elevate brands with cutting-edge strategies, measurable results, and an expert team." />
-      <PageHeader title="About" canonical={canonical} breadcrumb={[{ name: 'Home', url: 'https://www.adcedo.in/' }, { name: 'About', url: canonical }]} />
+      <Seo 
+        title="About ADCEDO — Our Story, Approach & Values" 
+        description="We elevate brands with cutting-edge strategies, measurable results, and an expert team." 
+      />
       <Section id="why" title="Why Choose ADCEDO">
         <ul className="list-disc pl-6 space-y-2 text-slate-700 max-w-3xl">
           <li>Innovative Solutions: Unique, impactful campaigns that drive results.</li>
@@ -21,3 +22,4 @@ export default function About() {
     </>
   )
 }
+
